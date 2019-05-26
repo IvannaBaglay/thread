@@ -12,16 +12,21 @@ private:
 
 	std::mutex mutex;
 	std::vector<Task*> resource;
-	Task* get_element(int n_procesor);
+	virtual Task* get_element(int n_procesor);
+	Task* get_element();
+	virtual void mutex_lock();
+	virtual void mutex_unlock();
+
 	
 public:
-	void generate_resource();
-	Common_Resource();
+	virtual void generate_resource();
+	virtual int get_n_resourse();
 	friend class Base_Procesor;
 	friend class Procesor_1;
 	friend class Procesor_2;
 	friend class Procesor_3;
 	friend class Procesor_4;
 	friend class Procesor_5;
+	friend class Procesor_add;
 };
 

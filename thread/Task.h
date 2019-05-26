@@ -9,6 +9,10 @@ public:
 	static int n_task_all;//кількість всіх задач
 	Task(int n); 
 	~Task();
+
+	static int upper;
+	static int lower;
+	static int probability;
 protected:
 
 	int getRandom(int &seed, int m);
@@ -19,7 +23,5 @@ protected:
 
 	
 private:
-	static int upper;
-	static int lower;
-	static int probability;
+	
 };
